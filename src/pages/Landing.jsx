@@ -30,7 +30,7 @@ const LandingPage = () => {
           </a>
         </nav>
 
-        <main className="relative z-10 text-left px-6 pb-20">
+        <main className="relative z-10 text-left px-6 pb-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }} 
             animate={{ opacity: 1, y: 0 }}
