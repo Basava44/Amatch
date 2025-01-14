@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/Amatch/static/css/main.fbd32ea2.css",
-    "main.js": "/Amatch/static/js/main.8839e886.js",
+    "main.css": "/Amatch/static/css/main.94dd8fd1.css",
+    "main.js": "/Amatch/static/js/main.9a9b366d.js",
     "static/js/488.7423bfcc.chunk.js": "/Amatch/static/js/488.7423bfcc.chunk.js",
     "static/media/landingpageImage.jpg": "/Amatch/static/media/landingpageImage.f7ec6864d556e9c2fd12.jpg",
+    "static/media/logo.png": "/Amatch/static/media/logo.d9f86ff655b78d23c2b6.png",
     "static/media/MergeOne-Regular.ttf": "/Amatch/static/media/MergeOne-Regular.e6196c6cb51f6af976d5.ttf",
     "static/media/embarrassed.png": "/Amatch/static/media/embarrassed.bd533b8329008c4c0467.png",
     "index.html": "/Amatch/index.html",
-    "main.fbd32ea2.css.map": "/Amatch/static/css/main.fbd32ea2.css.map",
-    "main.8839e886.js.map": "/Amatch/static/js/main.8839e886.js.map",
+    "main.94dd8fd1.css.map": "/Amatch/static/css/main.94dd8fd1.css.map",
+    "main.9a9b366d.js.map": "/Amatch/static/js/main.9a9b366d.js.map",
     "488.7423bfcc.chunk.js.map": "/Amatch/static/js/488.7423bfcc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbd32ea2.css",
-    "static/js/main.8839e886.js"
+    "static/css/main.94dd8fd1.css",
+    "static/js/main.9a9b366d.js"
   ]
 }
