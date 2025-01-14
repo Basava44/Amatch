@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "MergerOne";
+  src: url("./assets/fonts/MergeOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "MergerOne", sans-serif;
+  font-size: 24px;
+}
+
+.radix-themes {
+  --default-font-family: "MergerOne", sans-serif !important;
+  --color-background: #FFF5F0;
+  color: #fb4033 !important;
+  font-weight: bold !important;
+  font-size: 30px !important;
+}
