@@ -36,7 +36,7 @@ const LandingPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }} 
           >
-            <h1 className="text-4xl md:text-6xl font-bold max-w-3xl mb-6 text-[#FFF5F0]">
+            <h1 className="text-4xl md:text-6xl font-bold max-w-3xl text-[#FFF5F0]">
               Real Connections Start Here
             </h1>
           </motion.div>
