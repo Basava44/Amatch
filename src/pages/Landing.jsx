@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import landingImage from "../assets/images/landingpageImage.jpg";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -19,22 +20,21 @@ const LandingPage = () => {
 
       <div className="flex flex-col justify-between min-h-screen">
         <nav className="relative z-10 flex justify-between  px-6 py-8 ">
-          <a href="#" className="text-2xl font-bold text-[#fb4033]">
-            AMATCH
-          </a>
-          <a
-            href="#"
+          <div className="text-2xl font-bold text-[#fb4033]">AMATCH</div>
+
+          <Link
             className="text-xl font-medium transition-colors hover:opacity-90 text-[#fb4033]"
+            to="/login"
           >
             Login
-          </a>
+          </Link>
         </nav>
 
         <main className="relative z-10 text-left px-6 pb-10">
           <motion.div
-            initial={{ opacity: 0, y: 50 }} 
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }} 
+            transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold max-w-3xl text-[#FFF5F0]">
               Real Connections Start Here
