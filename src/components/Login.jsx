@@ -3,7 +3,7 @@ import { Phone, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
-const MobileLogin = () => {
+const MobileLogin = ({ onSubmit }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
@@ -18,6 +18,7 @@ const MobileLogin = () => {
     e.preventDefault();
     if (isValid) {
       console.log("Submitting phone number:", phoneNumber);
+      onSubmit(phoneNumber)
     }
   };
 
@@ -27,7 +28,7 @@ const MobileLogin = () => {
       <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-[#fb4033]/10 to-transparent" />
 
       {/* Main Content */}
-      <div className="relative h-screen flex flex-col justify-center px-8 max-w-md mx-auto">
+      <div className="relative h-screen flex flex-col px-8 pt-[50%] max-w-md mx-auto">
         {/* Logo Circle */}
         <Link to="/">
           <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
@@ -38,7 +39,9 @@ const MobileLogin = () => {
         {/* Login Container */}
         <div data-aos="fade-up" data-aos-duration="1000">
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-light text-gray-800">Meet Your Match</h1>
+            <h1 className="text-3xl font-light text-gray-800">
+              Meet Your Match
+            </h1>
             <p className="text-gray-500 mt-2 text-sm">
               Login with your phone number
             </p>

@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Timer, ArrowRight, ArrowLeft } from "lucide-react";
+import { Timer, ArrowRight } from "lucide-react";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
-const OTPVerification = ({ phoneNumber = "9876543210", onBack, onVerify }) => {
+const OTPVerification = ({ phoneNumber = "", onBack, onVerify }) => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [timer, setTimer] = useState(30);
   const [canResend, setCanResend] = useState(false);
@@ -50,7 +50,7 @@ const OTPVerification = ({ phoneNumber = "9876543210", onBack, onVerify }) => {
 
   const handleResend = () => {
     if (canResend) {
-      setOtp(["", "", "", ""]);
+      setOtp(["", "", "", "", "", ""]);
       setTimer(30);
       setCanResend(false);
       // Add resend OTP logic here
@@ -65,7 +65,7 @@ const OTPVerification = ({ phoneNumber = "9876543210", onBack, onVerify }) => {
       <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-[#fb4033]/10 to-transparent" />
 
       {/* Main Content */}
-      <div className="relative h-screen flex flex-col justify-center px-8 max-w-md mx-auto">
+      <div className="relative h-screen flex flex-col px-8 pt-[50%] max-w-md mx-auto">
         {/* Logo Circle */}
         <Link to="/">
           <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
@@ -94,7 +94,7 @@ const OTPVerification = ({ phoneNumber = "9876543210", onBack, onVerify }) => {
           </div>
 
           {/* OTP Input */}
-          <div className="mb-8">
+          <div className="mb-4">
             <div className="flex justify-center space-x-1">
               {otp.map((digit, index) => (
                 <input
@@ -105,28 +105,33 @@ const OTPVerification = ({ phoneNumber = "9876543210", onBack, onVerify }) => {
                   value={digit}
                   onChange={(e) => handleChange(e.target.value, index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
-                  className="w-14 h-14 text-center text-2xl border-0 border-b-2 border-gray-200 focus:border-[#fb4033] focus:ring-0 transition-all duration-300"
+                  className="w-14 h-14 text-center text-2xl border-0 border-b-2 border-gray-200 rounded-2xl focus:border-[#fb4033] focus:ring-0 transition-all duration-300"
                 />
               ))}
             </div>
           </div>
 
           {/* Timer and Resend */}
-          {/* <div className="text-center mb-8">
-            {timer > 0 ? (
-              <div className="flex items-center justify-center text-gray-500">
-                <Timer className="w-4 h-4 mr-2" />
-                <span>Resend code in {timer}s</span>
-              </div>
-            ) : (
-              <button
-                onClick={handleResend}
-                className="text-[#fb4033] hover:underline transition-all"
-              >
-                Resend Code
-              </button>
-            )}
-          </div> */}
+          <div className="flex justify-between text-sm mb-8">
+            <div className="text-gray-500" onClick={() => onBack()}>
+              wrong number ?
+            </div>
+            <div>
+              {timer > 0 ? (
+                <div className="flex items-center justify-center text-gray-500">
+                  <Timer className="w-4 h-4 mr-2" />
+                  <span>Resend code in {timer}s</span>
+                </div>
+              ) : (
+                <button
+                  onClick={handleResend}
+                  className="text-[#fb4033] hover:underline transition-all"
+                >
+                  Resend Code
+                </button>
+              )}
+            </div>
+          </div>
 
           {/* Verify Button */}
           <button

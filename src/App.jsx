@@ -5,6 +5,8 @@ import LandingPage from "./pages/Landing.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Login from "./pages/Login.jsx";
+import PageNotFound from "./pages/404.jsx";
+import Messages from "./pages/Messages.jsx";
 
 const App = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 435);
@@ -29,6 +31,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   ) : (
